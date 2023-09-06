@@ -7,7 +7,7 @@ function longest_common_substring(str1, str2){
         srr2subs.forEach(sub2=>{
         if(sub1===sub2){
             if(sub1.length> max.length){
-                debugger
+                // debugger
                 max=sub1
             }
         }
