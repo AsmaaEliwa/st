@@ -10,3 +10,9 @@ function  fibs(num){
     return holder
 }
 console.log(fibs(9))
+
+function fibs(num){
+    if(num===2)return [0,1]
+    if (num==1)return [0]
+    return fibs(num)
+}
