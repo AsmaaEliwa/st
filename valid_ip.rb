@@ -10,8 +10,14 @@ def valid_ip(str)
     valid
 end
 
+# //another solution 
+def valid_ip?(str)
+    return false unless str =~ /^\d+(\.\d+){3}$/
+    nums = str.split(".").map(&:to_i)
+    nums.all? {|num| num >= 0 && num <= 255}
+  end
 
 puts valid_ip("255.3.0")
 puts valid_ip("255.3.0.-1")
-puts valid_ip("255.3.0.1")
+puts valid_ip("25/.3.0.1")
 
