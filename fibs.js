@@ -9,7 +9,7 @@ function  fibs(num){
     }
     return holder
 }
-
+// recursively
 function fibs(num){
     if(num===2)return [0,1]
     if (num===1)return [0]
