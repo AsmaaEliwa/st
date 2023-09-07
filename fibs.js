@@ -1,7 +1,7 @@
 // Write a function, fibs(num) which returns the first n elements from the fibonnacci sequence, given n.
 // Solve it both iteratively and recursively.
 
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 function  fibs(num){
     const holder=[0,1];
     for (let i=0 ; i<num-2 ;i++){
@@ -20,3 +20,16 @@ function fibs(num){
     return prev
 }
 console.log(fibs(10))
+
+
+function  fibs(num){
+if (num===2 || num===1) return 1
+ 
+    return  fibs(num-1) + fibs(num-2)
+}
+
+console.log(fibs(1))
+console.log(fibs(2))
+console.log(fibs(3))
+console.log(fibs(4))
+console.log(fibs(5))
