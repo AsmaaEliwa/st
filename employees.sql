@@ -30,4 +30,13 @@ users
 WHERE 
 user.active=true;
 
+-- another solution 
+
+User.where(:active => "TRUE").count
 -- c. "count all users who visited the site within a certain time period".
+SELECT
+count(*)
+FROM 
+users
+WHERE
+users.last_login BETWEEN :time_period_start AND :time_period_end ;
