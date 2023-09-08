@@ -14,3 +14,5 @@ function uniqe_subs(word){
 }
 
 console.log(uniqe_subs("word"))
+
+// # the time complixity is  O(n^3)
