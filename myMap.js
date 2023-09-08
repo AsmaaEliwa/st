@@ -13,3 +13,14 @@ Array.prototype.myMap=function(callBack){
 
 const arr=[1,2,3]
 console.log(arr.myMap(addOne))
+
+// ES6 Solution
+
+Array.prototype.myMap = function(fn) {
+    const final = [];
+    this.forEach((el) => {
+      final.push(fn(el));
+    });
+  
+    return final;
+  };
