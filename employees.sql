@@ -8,3 +8,16 @@ JOIN
   departments d ON e.department_id = d.id
 WHERE
   d.name = ?
+
+
+
+--   (from InstaCart) Write the following queries in SQL and in Rails:
+
+-- a. "count all users",
+SELECT
+ count(*)
+FROM 
+users;
+
+-- b. "count all active users (you define what active means)",
+-- c. "count all users who visited the site within a certain time period".
