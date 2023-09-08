@@ -23,4 +23,11 @@ users;
 User.count
 
 -- b. "count all active users (you define what active means)",
+SELECT
+count(*)
+FROM
+users
+WHERE 
+user.active=true;
+
 -- c. "count all users who visited the site within a certain time period".
