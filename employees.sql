@@ -19,5 +19,8 @@ SELECT
 FROM 
 users;
 
+-- another solution 
+User.count
+
 -- b. "count all active users (you define what active means)",
 -- c. "count all users who visited the site within a certain time period".
