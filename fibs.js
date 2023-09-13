@@ -22,12 +22,12 @@ function fibs(num){
 // console.log(fibs(10))
 
 
-function  fibs(num){
+function  fibs(num){     // o(2^n)
 if (num===2 || num===1) return 1
  
     return  fibs(num-1) + fibs(num-2)
 }
-// Memoizing Fib (actually)
+// Memoizing Fib (actually)  o(n)
 
 function fibs(num, memo={}){
 if (num in memo) return memo[num]
