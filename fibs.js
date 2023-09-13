@@ -9,7 +9,7 @@ function  fibs(num){
     }
     return holder
 }
-// recursively
+// // recursively
 function fibs(num){
     if(num===2)return [0,1]
     if (num===1)return [0]
@@ -19,7 +19,7 @@ function fibs(num){
     prev.push(next)
     return prev
 }
-console.log(fibs(10))
+// console.log(fibs(10))
 
 
 function  fibs(num){
@@ -27,9 +27,18 @@ if (num===2 || num===1) return 1
  
     return  fibs(num-1) + fibs(num-2)
 }
+// Memoizing Fib (actually)
+
+function fibs(num, memo={}){
+if (num in memo) return memo[num]
+if (num===1 || num===2)return 1
+memo[num]=fibs(num-1, memo)+fibs(num-2 , memo) 
+return memo[num]
+}
 
 console.log(fibs(1))
 console.log(fibs(2))
 console.log(fibs(3))
 console.log(fibs(4))
-console.log(fibs(5))
+console.log(fibs(50))
+

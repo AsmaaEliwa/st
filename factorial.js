@@ -29,4 +29,3 @@ console.log(memo)
 
 console.log(factorial(6))
 
-
