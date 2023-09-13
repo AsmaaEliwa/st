@@ -20,8 +20,13 @@ function factorial(n){
 }
 
 console.log(factorial(5))
+console.log(memo)
 console.log(factorial(5))
+console.log(memo)
+
 console.log(factorial(6))
+console.log(memo)
+
 console.log(factorial(6))
 
 
