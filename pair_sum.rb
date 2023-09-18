@@ -16,9 +16,32 @@ def pair_sum(arr,k)
 holder
 end
 
+# another solution 
+require 'set'
 
-puts pair_sum([1, 2, -1], 0)          # => #<Set: {[-1, 1]}>
-puts pair_sum([1, 2, -1, -1], 0)      # => #<Set: {[-1, 1]}>
+def pair_sum(arr, k)
+  seen = Set.new
+  pairs = Set.new
+
+  arr.each do |num|
+    target = k - num
+
+    if seen.include?(target)
+      # add in [min, max] order
+      pairs.add(
+        [[num, target].min, [num, target].max]
+      )
+    end
+
+    # add `num` after checking; what if we put this before and there's
+    # a single `0` is in the `arr`?
+    seen.add(num)
+  end
+
+  pairs
+end
+# puts pair_sum([1, 2, -1], 0)          # => #<Set: {[-1, 1]}>
+# puts pair_sum([1, 2, -1, -1], 0)      # => #<Set: {[-1, 1]}>
 # puts pair_sum([1, 2, -1, -1, -2], 0)  # => #<Set: {[-1, 1], [-2, 2]}>
 # puts pair_sum([1, 2, -1, -1, -2], 1)  # => #<Set: {[-1, 2]}>
-puts pair_sum([1, 2, -1, -1, -2], -1) # => #<Set: {[-2, 1]}>
+# puts pair_sum([1, 2, -1, -1, -2], -1) # => #<Set: {[-2, 1]}>
